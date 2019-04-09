@@ -15,7 +15,7 @@ public class FuncionarioDAO {
     EntityManager em = emf.createEntityManager();
     EntityTransaction et = null;
 
-    //Salvar cliente
+    //Salvar funcionario
     public void create(Funcionario funcionario) throws Exception {
         et = em.getTransaction();
         try {
@@ -36,7 +36,7 @@ public class FuncionarioDAO {
         }
     }
 
-    //Alterar Cliente
+    //Alterar funcionario
     public void edit(Funcionario funcionario) throws Exception {
         et = em.getTransaction();
         try {
@@ -64,7 +64,7 @@ public class FuncionarioDAO {
         }
     }
 
-    //Apagar cliente
+    //Apagar funcionario
     public void destroy(Long id) throws Exception {
         et = em.getTransaction();
         try {
@@ -92,7 +92,7 @@ public class FuncionarioDAO {
         }
     }
 
-    //Busca cliete pelo id
+    //Busca funcionario pelo id
     public Funcionario findFuncionario(Long id) {
         try {
             return em.find(Funcionario.class, id);
@@ -113,7 +113,7 @@ public class FuncionarioDAO {
         }
     }
     
-     //Busca cliente pela email e senha
+     //Busca funcionario pela email e senha
     public Funcionario findFuncionario(String email, String pws) {
         try {
             Query query = em.createQuery(""
